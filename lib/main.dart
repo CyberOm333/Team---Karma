@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           primarySwatch: Colors
               .green), // here brightness is dark so the color will be in black shade to remove that remove brightness
-      // initialRoute: "/home",
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) =>
             LoginPage(), // For this to run we need to remove home:HomePage() because that is pointing to home page and this "/" also points to home page so to work properly we need to remove one of them
