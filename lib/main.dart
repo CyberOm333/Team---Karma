@@ -17,15 +17,19 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode
           .light, // Change this light to dark for changing the theme to dark from light
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+          primarySwatch: Colors.purple,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          appBarTheme: AppBarTheme(
+              color: Colors.white,
+              elevation: 0.0,
+              iconTheme: IconThemeData(color: Colors.black),
+              toolbarTextStyle: Theme.of(context).textTheme.bodyText1)),
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
           brightness: Brightness.dark,
           primarySwatch: Colors
               .green), // here brightness is dark so the color will be in black shade to remove that remove brightness
-      initialRoute: MyRoutes.homeRoute,
+      // initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) =>
             LoginPage(), // For this to run we need to remove home:HomePage() because that is pointing to home page and this "/" also points to home page so to work properly we need to remove one of them
