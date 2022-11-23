@@ -1,5 +1,6 @@
 import 'package:demo/pages/login_page.dart';
 import 'package:demo/utils/routes.dart';
+import 'package:demo/widgets/themes.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
@@ -16,19 +17,10 @@ class MyApp extends StatelessWidget {
       // home: HomePage(),
       themeMode: ThemeMode
           .light, // Change this light to dark for changing the theme to dark from light
-      theme: ThemeData(
-          primarySwatch: Colors.purple,
-          fontFamily: GoogleFonts.lato().fontFamily,
-          appBarTheme: AppBarTheme(
-              color: Colors.white,
-              elevation: 0.0,
-              iconTheme: IconThemeData(color: Colors.black),
-              toolbarTextStyle: Theme.of(context).textTheme.bodyText1)),
+      theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(
-          brightness: Brightness.dark,
-          primarySwatch: Colors
-              .green), // here brightness is dark so the color will be in black shade to remove that remove brightness
+      darkTheme: MyTheme.darkTheme(
+          context), // here brightness is dark so the color will be in black shade to remove that remove brightness
       // initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) =>
