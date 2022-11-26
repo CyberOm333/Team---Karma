@@ -1,0 +1,25 @@
+{
+    "products" :[
+        {
+           "id": 1,
+           "name" :"iPhone 14 pro",
+           "desc": "Apple iphone 14th generation",
+           "price": 1029,
+           "color" : "#33505a",
+           "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-14-model-unselect-gallery-2-202209_GEO_EMEA_FMT_WHH?wid=1280&hei=492&fmt=p-jpg&qlt=80&.v=1660745126016"
+        },
+        {
+            "id" : 2,
+            "name" : "Ipad Pro",
+            "desc" : "Apple iPad pro 2022 edition",
+            "price" : 799,
+            "color" : "#f73984",
+            "image" : "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-pro-select-202210?wid=545&hei=550&fmt=jpeg&qlt=95&.v=1664411207154"
+        }
+    ]
+
+
+
+
+    
+}
