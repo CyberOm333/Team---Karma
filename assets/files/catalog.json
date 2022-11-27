@@ -10,7 +10,7 @@
         },
         {
             "id" : 2,
-            "name" : "Ipad Pro",
+            "name" : "Ipad Pro",    
             "desc" : "Apple iPad pro 2022 edition",
             "price" : 799,
             "color" : "#f73984",

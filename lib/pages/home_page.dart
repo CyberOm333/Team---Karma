@@ -24,7 +24,10 @@ class _HomePageState extends State<HomePage> {
         await rootBundle.loadString("assets/files/catalog.json");
     final decodeData = jsonDecode(catalogJson);
     var productsData = decodeData["products"];
-    print(productsData);
+    List<Item> list = List.from(productsData)
+        .map<Item>((item) => Item.fromMap(item))
+        .toList();
+    // print(productsData);
   }
 
   Widget build(BuildContext context) {
