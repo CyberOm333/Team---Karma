@@ -15,7 +15,7 @@ class ItemWidget extends StatelessWidget {
           onTap: () {
             print("${item.name} pressed");
           },
-          leading: Image.asset("assests/images/iPhone_14_pro_Max.png"),
+          leading: Image.asset("assets/image/Ipad_2022.jpg"),
           title: Text(item.name),
           subtitle: Text(item.desc),
           trailing: Text("\$${item.price}",
