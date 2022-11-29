@@ -9,8 +9,7 @@ class CatalogModel {
         desc: "Apple iPhone 14th generation",
         price: 1029,
         color: "#33505a",
-        image:
-            "https://media.croma.com/image/upload/v1662703724/Croma%20Assets/Communication/Mobiles/Images/261934_qgssvy.png")
+        image: "assets/image/iPhone_14_Pro_Max.png")
   ];
 }
 
