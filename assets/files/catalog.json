@@ -6,7 +6,7 @@
            "desc": "Apple iphone 14th generation",
            "price": 1029,
            "color" : "#33505a",
-           "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202210?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1664411207141"
+           "image": "https://m.media-amazon.com/images/I/31laW9Ex46L._SY445_SX342_QL70_FMwebp_.jpg"
         },
         {
             "id" : 2,
@@ -14,7 +14,7 @@
             "desc" : "Apple iPad pro 2022 edition",
             "price" : 799,
             "color" : "#f73984",
-            "image" : "assets/image/Ipad_2022.jpg"
+            "image" : "https://m.media-amazon.com/images/I/41WkmC8bOEL._SY445_SX342_QL70_FMwebp_.jpg"
         },
         {
             "id" : 3,
@@ -22,13 +22,13 @@
             "desc": "Apple iphone 13th generation",
             "price" : 999,
             "color" : "#33505a",
-            "image" : "assets/image/Prophile Pic.png"
+            "image" : "https://m.media-amazon.com/images/I/31S2VbijUML._SY445_SX342_QL70_FMwebp_.jpg"
         },
         {
             "id":3,
-            "name" :"Galaxy S22",
-            "desc" : "Samsung galaxy S22 Ultra 2022",
-            "price" : 600,
+            "name" :"Samsung Galaxy S22",
+            "desc" : " S22 Ultra 5G",
+            "price" : 1200,
             "color" : "#f73984",
             "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMKwRiuKX5kq68evKyD2o4fS9akNoKnkBjZgyy7WQ&s"
         }

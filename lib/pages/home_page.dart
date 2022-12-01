@@ -24,12 +24,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   void initState() {
+    super.initState();
+    // ignore: todo
     // TODO: implement initState
     loadData();
   }
 
   loadData() async {
-    // await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final decodeData = jsonDecode(catalogJson);
@@ -41,6 +43,7 @@ class _HomePageState extends State<HomePage> {
     // print(productsData);
   }
 
+  @override
   Widget build(BuildContext context) {
     // final int days = 3;
     // final String name = "OM";
@@ -50,8 +53,9 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+          // ignore: deprecated_member_use
           backgroundColor: context.theme.buttonColor,
-          child: Icon(CupertinoIcons.cart, color: Colors.white),
+          child: const Icon(CupertinoIcons.cart, color: Colors.white),
         ),
         body: SafeArea(
           child: Container(
@@ -60,12 +64,14 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CatalogHeader(),
-                if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+                if (CatalogModel.items.isNotEmpty)
                   CatalogList().py16().expand()
                 else
                   Center(
-                    child:
-                        CircularProgressIndicator().centered().py16().expand(),
+                    child: const CircularProgressIndicator()
+                        .centered()
+                        .py16()
+                        .expand(),
                   )
               ],
             ),

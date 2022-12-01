@@ -39,7 +39,7 @@ class HomeDetailPage extends StatelessWidget {
         bottom: false,
         child: Column(
           children: [
-            Image.asset("assets/image/iPhone_14_Pro_Max.png").h32(context),
+            Image.network(catalog.image).h32(context),
             Expanded(
               child: VxArc(
                 height: 30.0,

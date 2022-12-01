@@ -11,13 +11,8 @@ class CatalogImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset("assets/image/iPhone_14_Pro_Max.png")
-        .box
-        .rounded
-        .p8
-        .color(context.canvasColor)
-        .make()
-        .p16()
-        .w40(context);
+    return Image.network(
+      image,
+    ).box.rounded.p8.color(MyTheme.creamColor2).make().p16().w40(context);
   }
 }
