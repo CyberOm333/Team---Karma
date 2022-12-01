@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode
-          .light, // Change this light to dark for changing the theme to dark from light
+          .system, // Change this light to dark for changing the theme to dark from light
       theme: MyTheme.lightTheme(context),
       debugShowCheckedModeBanner: false,
       darkTheme: MyTheme.darkTheme(

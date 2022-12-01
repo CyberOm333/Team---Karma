@@ -9,8 +9,11 @@ class CatalogModel {
         desc: "Apple iPhone 14th generation",
         price: 1029,
         color: "#33505a",
-        image: "assets/image/iPhone_14_Pro_Max.png")
+        image: "assets/image/Ipad_2022.jpg")
   ];
+  static Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: () => null);
+  static Item getByPosition(int pos) => items[pos];
 }
 
 class Item {

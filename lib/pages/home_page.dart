@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    await Future.delayed(Duration(seconds: 2));
+    // await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/catalog.json");
     final decodeData = jsonDecode(catalogJson);
@@ -43,15 +43,15 @@ class _HomePageState extends State<HomePage> {
 
   Widget build(BuildContext context) {
     // final int days = 3;
-    final String name = "OM";
+    // final String name = "OM";
 
     // final dummyList = List.generate(50, (index) => CatalogModel.items[0]); // To make multiple copies of one card
     return Scaffold(
-        backgroundColor: MyTheme.OrangeColor,
+        backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-          backgroundColor: MyTheme.DarkBlue,
-          child: Icon(CupertinoIcons.cart),
+          backgroundColor: context.theme.buttonColor,
+          child: Icon(CupertinoIcons.cart, color: Colors.white),
         ),
         body: SafeArea(
           child: Container(
