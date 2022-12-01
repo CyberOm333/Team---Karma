@@ -2,6 +2,11 @@
 import 'dart:convert';
 
 class CatalogModel {
+  static final catModel = CatalogModel._internal();
+  CatalogModel._internal();
+
+  factory CatalogModel() => catModel;
+
   static List items = [
     Item(
         id: 1,
@@ -11,9 +16,9 @@ class CatalogModel {
         color: "#33505a",
         image: "assets/image/Ipad_2022.jpg")
   ];
-  static Item getById(int id) =>
-      items.firstWhere((element) => element.id == id, orElse: () => null);
-  static Item getByPosition(int pos) => items[pos];
+  Item getById(int id) =>
+      items.firstWhere((element) => element.id == id, orElse: null);
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
