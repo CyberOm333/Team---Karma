@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+import 'package:demo/core/store.dart';
 import 'package:demo/utils/routes.dart';
 import 'package:demo/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,6 +14,7 @@ import 'package:demo/widgets/item_widget.dart';
 
 import 'home_widget/catalog_header.dart';
 import 'home_widget/catalog_list.dart';
+import 'package:http/http.dart' as http;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -23,6 +25,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  final url = "";
   void initState() {
     super.initState();
     // ignore: todo
@@ -49,6 +52,8 @@ class _HomePageState extends State<HomePage> {
     // final String name = "OM";
 
     // final dummyList = List.generate(50, (index) => CatalogModel.items[0]); // To make multiple copies of one card
+
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
         backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
@@ -56,7 +61,16 @@ class _HomePageState extends State<HomePage> {
           // ignore: deprecated_member_use
           backgroundColor: context.theme.buttonColor,
           child: const Icon(CupertinoIcons.cart, color: Colors.white),
-        ),
+        )
+        // .badge(
+        //     color: Vx.red400,
+        //     size: 22,
+        //     count: _cart.items.length,
+        //     textStyle: TextStyle(
+        //       color: Colors.black,
+        //       fontWeight: FontWeight.bold,
+        //     )),
+        ,
         body: SafeArea(
           child: Container(
             padding: Vx.m32,
